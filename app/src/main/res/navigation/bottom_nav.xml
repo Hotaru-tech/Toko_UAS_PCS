@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/produkFragment">
+
+    <fragment
+        android:id="@+id/produkFragment"
+        android:name="com.aplikasi.toko.ProdukFragment"
+        android:label="fragment_produk"
+        tools:layout="@layout/fragment_produk" />
+    <fragment
+        android:id="@+id/transaksiFragment"
+        android:name="com.aplikasi.toko.TransaksiFragment"
+        android:label="fragment_transaksi"
+        tools:layout="@layout/fragment_transaksi" />
+    <fragment
+        android:id="@+id/laporanFragment"
+        android:name="com.aplikasi.toko.LaporanFragment"
+        android:label="fragment_laporan"
+        tools:layout="@layout/fragment_laporan" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.aplikasi.toko.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/produkFormFragment"
+        android:name="com.aplikasi.toko.ProdukFormFragment"
+        android:label="fragment_produk_form"
+        tools:layout="@layout/fragment_produk_form" >
+        <argument
+            android:name="argsProduk"
+            app:argType="com.aplikasi.toko.response.produk.Produk"
+            app:nullable="true" />
+        <argument
+            android:name="argsStatus"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/bayarFragment"
+        android:name="com.aplikasi.toko.BayarFragment"
+        android:label="fragment_bayar"
+        tools:layout="@layout/fragment_bayar" >
+        <argument
+            android:name="argsCart"
+            app:argType="com.aplikasi.toko.response.cart.Cart" />
+        <argument
+            android:name="argsTotal"
+            app:argType="string" />
+    </fragment>
+</navigation>
